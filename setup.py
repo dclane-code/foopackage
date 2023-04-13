@@ -3,5 +3,10 @@ from setuptools import setup
 setup(
     name='foopackage',
     version='0.0.1',
-    install_requires=[],
+    packages=["foopackage"],
+    entry_points={
+        "console_scripts": [
+            "foopackage = foopackage.__main__:main"
+        ]
+    },
 )
